@@ -1,7 +1,6 @@
-/* Global Styles */
 body {
   background-color: white;
-  color: #222222;
+  color: #888888;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
@@ -12,7 +11,6 @@ body {
   padding: 2rem;
 }
 
-/* Product Styles */
 .product {
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +33,6 @@ body {
   margin-right: 1rem;
 }
 
-/* Header Styles */
 .header-line {
   background-color: #F6F6F7;
   height: 2rem;
@@ -45,7 +42,6 @@ body {
   cursor: pointer;
 }
 
-/* Cart Styles */
 .cart-container {
   background-color: #fff;
   padding: 1rem;
@@ -71,7 +67,6 @@ body {
   position: relative;
 }
 
-/* Sizes Styles */
 .sizes {
   display: flex;
   gap: 5px;
@@ -91,7 +86,6 @@ body {
   background-color: #e0e0e0;
 }
 
-/* Custom Button Styles */
 .custom-button {
   border: 3px solid black;
   border-radius: 0;

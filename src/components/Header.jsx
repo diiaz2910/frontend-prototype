@@ -9,13 +9,11 @@ function Header({ cart }) {
   const [cartVisible, setCartVisible] = useState(false);
 
   const handleCartClick = () => {
-    // activar visibilidad del carrito
     setCartVisible((prevVisible) => !prevVisible);
   };
 
   const handleRemoveItem = (item) => {
     console.log("Removing item:", item);
-    // lógica para eliminar un elemento del carrito
   };
 
   return (
