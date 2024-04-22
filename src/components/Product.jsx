@@ -42,16 +42,18 @@ function Product({ setCart }) {
         <h2> {product?.title} </h2>
         <p> ${product?.price} </p>
         {product?.description && <p>{product.description}</p>}
+        <div>{selectedSize && <p>Size: {selectedSize}</p>}</div>
         <div className="sizes">
           {product?.sizeOptions?.map((size) => (
             <button key={size.id} onClick={() => handleSizeClick(size.label)}>
               {size.label}
             </button>
           ))}
-          {selectedSize && <p>Selected size: {selectedSize}</p>}
         </div>
         <div className="mt-16">
-          <button onClick={handleAddToCartClick}>Add to cart</button>
+          <button className="custom-button" onClick={handleAddToCartClick}>
+            ADD TO CART
+          </button>
         </div>
       </div>
     </div>

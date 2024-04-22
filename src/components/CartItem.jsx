@@ -8,11 +8,7 @@ function CartItem({ item, onRemoveItemClick }) {
   return (
     <li>
       <div>
-        <img
-          src={item.imageURL}
-          alt={item.title}
-          style={{ width: "50px", height: "50px" }}
-        />
+        <img src={item.imageURL} alt={item.title} className="cart-item-image" />
         <div>
           <p>{item.title}</p>
           <p>Size: {item.size}</p>

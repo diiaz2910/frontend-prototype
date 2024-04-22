@@ -1,6 +1,9 @@
+/* Global Styles */
 body {
   background-color: white;
   color: #222222;
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
 
 #root {
@@ -9,16 +12,19 @@ body {
   padding: 2rem;
 }
 
+/* Product Styles */
 .product {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .product-image {
-  margin-left: auto;
+  flex: 0 0 250px;
+  margin-right: 2rem;
 }
 
 .product-info {
-  margin-left: 2rem;
+  flex: 1;
 }
 
 .mt-16 {
@@ -29,36 +35,92 @@ body {
   margin-right: 1rem;
 }
 
-
+/* Header Styles */
 .header-line {
   background-color: #F6F6F7;
   height: 2rem;
   text-align: right;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   color: #888888;
   cursor: pointer;
 }
 
+/* Cart Styles */
+.cart-container {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.cart-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .cart-item {
-  display: flex;
+  display: grid;
   align-items: center;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
 }
 
-.item-info {
-  margin-left: 10px;
+.cart-item-image {
+  width: 150px;
+  height: auto;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
+/* Sizes Styles */
+.sizes {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.sizes button {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 0;
+  color: #888888;
+  padding: 0.5rem 1rem;
+}
+
+.sizes button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Custom Button Styles */
+.custom-button {
+  border: 3px solid black;
+  border-radius: 0;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
   }
+
+  .product-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .header-line {
+    margin-bottom: 1rem;
+  }
+
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}

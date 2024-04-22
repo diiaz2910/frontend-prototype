@@ -23,11 +23,9 @@ function Header({ cart }) {
       <div className="mr-16" onClick={handleCartClick}>
         <h4>My Cart</h4>
       </div>
-      {/* Renderizar el carrito condicionalmente */}
       {cartVisible && (
-        <div>
-          <h1>Cart</h1>
-          <ul>
+        <div className="cart-container">
+          <ul className="cart-list">
             {cart.map((item) => (
               <CartItem
                 key={item.id}
