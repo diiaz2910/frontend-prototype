@@ -25,9 +25,9 @@ function Product({ setCart }) {
         {
           size: selectedSize,
           quantity: 1,
-          imageURL: product.imageURL, // Add imageURL to the cart item
-          title: product.title, // Add title to the cart item
-          price: product.price, // Add price to the cart item
+          imageURL: product.imageURL,
+          title: product.title,
+          price: product.price,
         },
       ]);
     }

@@ -39,6 +39,15 @@ body {
   cursor: pointer;
 }
 
+.cart-item {
+  display: flex;
+  align-items: center;
+}
+
+.item-info {
+  margin-left: 10px;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {

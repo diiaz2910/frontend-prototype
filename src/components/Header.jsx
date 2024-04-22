@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import Cart from "./Cart";
+import CartItem from "./CartItem";
 
 // styles
 import "../App.css";
@@ -9,8 +9,13 @@ function Header({ cart }) {
   const [cartVisible, setCartVisible] = useState(false);
 
   const handleCartClick = () => {
-    // Toggle the visibility of the cart
+    // activar visibilidad del carrito
     setCartVisible((prevVisible) => !prevVisible);
+  };
+
+  const handleRemoveItem = (item) => {
+    console.log("Removing item:", item);
+    // lógica para eliminar un elemento del carrito
   };
 
   return (
@@ -18,8 +23,21 @@ function Header({ cart }) {
       <div className="mr-16" onClick={handleCartClick}>
         <h4>My Cart</h4>
       </div>
-      {/* Render the cart component conditionally based on the state */}
-      {cartVisible && <Cart cart={cart} />}
+      {/* Renderizar el carrito condicionalmente */}
+      {cartVisible && (
+        <div>
+          <h1>Cart</h1>
+          <ul>
+            {cart.map((item) => (
+              <CartItem
+                key={item.id}
+                item={item}
+                onRemoveItemClick={handleRemoveItem}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
